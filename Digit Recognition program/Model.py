@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """ This function performs the feed-forward and backpropagation.
-It also calculates Cross-entropy costs for checking the errors between the prediction and original values """"
+It also calculates Cross-entropy costs for checking the errors between the prediction and original values """
 
 import numpy as np
 

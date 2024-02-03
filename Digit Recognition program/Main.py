@@ -1,6 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Handwritten Digit Recognition using Neural Network.ipynb
-b
+"""
 # Handwritten Digit Recognition using Neural Network
 
 Handwritten digit recognition using MNIST dataset is a major project made with the help of Neural Network. It basically detects the scanned images of handwritten digits.
@@ -21,15 +20,16 @@ from scipy.optimize import minimize
 
 """### Loading The Mat File"""
 
-from google.colab import files
-uploaded = files.upload()
+# from google.colab import files # when using colab
+# uploaded = files.upload() # when using colab 
 
-import scipy.io
+# import scipy.io # when using colab
 import pandas as pd
 import matplotlib.pyplot as plt
-# Load the .mat file
-mat = scipy.io.loadmat('mnist-original.mat')
+# Load the .mat file # when using colab
+# mat = scipy.io.loadmat('mnist-original.mat') # when using colab
 
+mat = loadmat('Data/mnist-original.mat')
 # The data is typically stored in the 'data' key
 data = mat['data']
 
@@ -95,9 +95,8 @@ nn_params = results["x"] # Trained Theta is extracted
 Theta1 = np.reshape(nn_params[:hidden_layer_size * (input_layer_size + 1)], (
     hidden_layer_size, input_layer_size + 1 # Shape = (100, 785)
 ))
-Theta2 = np.reshape(nn_params[hidden_layer_size * (input_layer_size + 1):], (
-    num_labels, input_layer_size + 1 # Shape = (10, 101)
-))
+Theta2 = np.reshape(nn_params[hidden_layer_size * (input_layer_size + 1):], 
+                      (num_labels, hidden_layer_size + 1))  # shape = (10, 101)
 
 # Checking test set accuracy of our model
 pred = predict(Theta1, Theta2, X_test)
