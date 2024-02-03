@@ -12,7 +12,7 @@ def neural_network(nn_params, input_layer_size, hidden_layer_size, num_labels, X
   m = X.shape[0]
   one_matrix = np.ones((m, 1))
   X = np.append(one_matrix, X, axis = 1) # Adding bias unit to first layer
-  a1 = x
+  a1 = X
   z2 = np.dot(X, Theta1.transpose())
   a2 = 1 / (1 + np.exp(-z2)) # Activation for second layer
   one_matrix = np.ones((m, 1))
