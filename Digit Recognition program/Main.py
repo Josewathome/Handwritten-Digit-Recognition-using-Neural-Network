@@ -17,19 +17,16 @@ from Model import neural_network
 from RandInitialize import initialise
 from Prediction import predict
 from scipy.optimize import minimize
+import subprocess
 
 """### Loading The Mat File"""
-
-# from google.colab import files # when using colab
-# uploaded = files.upload() # when using colab 
 
 # import scipy.io # when using colab
 import pandas as pd
 import matplotlib.pyplot as plt
-# Load the .mat file # when using colab
-# mat = scipy.io.loadmat('mnist-original.mat') # when using colab
 
-mat = loadmat('Data/mnist-original.mat')
+
+mat = loadmat('mnist-original.mat')
 # The data is typically stored in the 'data' key
 data = mat['data']
 
@@ -117,3 +114,5 @@ print('Precision =', true_positive/(true_positive + false_positive))
 # Saving Thetas in .txt file
 np.savetxt('Theta1.txt', Theta1, delimiter=' ')
 np.savetxt('Theta2.txt', Theta2, delimiter=' ')
+
+subprocess.call(["python", "GUI.py"])

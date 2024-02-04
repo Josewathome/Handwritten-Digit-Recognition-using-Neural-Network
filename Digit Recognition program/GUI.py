@@ -85,6 +85,6 @@ b2.place(x=320, y=370)
 cv = Canvas(window, width = 350, height = 290, bg = 'black')
 cv.place(x=120, y=70)
 
-cv.bind('<Button-1', event_activation)
+cv.bind('<Button-1>', event_activation)
 window.geometry('600x500')
 window.mainloop()
