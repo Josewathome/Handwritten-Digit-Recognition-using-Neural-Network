@@ -9,3 +9,5 @@ We will approach this project by using a three-layered Neural Network.
 **The hidden layer**: They are made of hidden units called activations providing nonlinear ties for the network. A number of hidden layers can vary according to our requirements.
 
 **The output layer**: The nodes here are called output units. It provides us with the final prediction of the Neural Network on the basis of which final predictions can be made.
+
+Also we save the Theta1 and Theta2 data in .txt file for further analysis.
