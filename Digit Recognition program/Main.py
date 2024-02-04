@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """
 # Handwritten Digit Recognition using Neural Network
-
+By Joseph Wathome
 Handwritten digit recognition using MNIST dataset is a major project made with the help of Neural Network. It basically detects the scanned images of handwritten digits.
 
 I have taken this a step further where our handwritten digit recognition system not only detects scanned images of handwritten digits but also allows writing digits on the screen with the help of an integrated GUI for recognition.
@@ -110,7 +110,7 @@ for i in range(len(pred)):
         true_positive += 1
 false_positive = len(y_train) - true_positive
 print('Precision =', true_positive/(true_positive + false_positive))
- 
+print("By JOSEPH WATHOME")
 # Saving Thetas in .txt file
 np.savetxt('Theta1.txt', Theta1, delimiter=' ')
 np.savetxt('Theta2.txt', Theta2, delimiter=' ')
